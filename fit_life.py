@@ -15,16 +15,15 @@ user_height = float(input('Введите ваш рост в метрах исп
 # Расчет индекса массы тела
 bmi = round(user_weight / (user_height ** 2), 1)
 
+ML_PER_L = 1000
 WATER_PER_KG = 30
 # расчет потребленя воды в мл.
 water_ml = user_weight * WATER_PER_KG
 
 # Переводим мл. в литры
-water_l = round(water_ml / 1000, 1)
+water_l = round(water_ml / ML_PER_L, 1)
 
 print(f'Отчет для пользователя: {user_name} ({user_age} г.)')
 print(f'Твой Индекс Массы Тела: {bmi}')
 print(f'Рекомендуемая норма воды: {water_l} л. в день')
-print()
-print()
 print("Расчет окончен. Будьте здоровы!")
